@@ -7,6 +7,10 @@ const router= new VueRouter({
         {
             path:'/',
             component:()=>import('../view/Login.vue')
+        },
+        {
+            path:'*',
+            component:()=>import('../view/404.vue')
         }
     ]
 })
