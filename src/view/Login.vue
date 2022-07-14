@@ -104,7 +104,7 @@ export default {
         confirmPass: "",
       },
       check: {
-        name: [
+        username: [
           { required: true, message: "请输入用户名", trigger: "blur" },
           { min: 3, max: 5, message: "长度在 3~5 个字符", trigger: "blur" },
         ],
@@ -164,22 +164,23 @@ export default {
     Login() {
       this.$refs.form.validate(async (v) => {
         if (!v) return;
-        const {data:res} = await this.$http.post("/api/login", {
+        const { data: res } = await this.$http.post("/api/login", {
           username: this.rulesForm.username,
           password: this.rulesForm.password,
         });
-        if(res.status!==200){
+        if (res.status !== 200) {
           this.$message({
-            type:'error',
-            message:res.msg
-          })
-          return
+            type: "error",
+            message: res.msg,
+          });
+          return;
         }
-        sessionStorage.setItem('token',res.token)
+        sessionStorage.setItem("token", res.token);
+        this.$router.push("/home");
         this.$message({
-          type:'success',
-          message:res.msg
-        })
+          type: "success",
+          message: res.msg,
+        });
       });
     },
   },
