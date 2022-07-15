@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { Button ,Form,FormItem,Input,Message,Container,Header,Aside,Main,Menu,Submenu,MenuItemGroup,
-MenuItem,Card,Breadcrumb,BreadcrumbItem,Upload} from 'element-ui'
+MenuItem,Card,Breadcrumb,BreadcrumbItem,Upload,Table,TableColumn,Row,Col,Dialog,MessageBox} from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Form)
@@ -18,5 +18,11 @@ Vue.use(Card)
 Vue.use(Breadcrumb)
 Vue.use(BreadcrumbItem)
 Vue.use(Upload)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Row)
+Vue.use(Col)
+Vue.use(Dialog)
 
 Vue.prototype.$message=Message
+Vue.prototype.$confirm=MessageBox.confirm

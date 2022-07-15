@@ -18,12 +18,15 @@ const router = new VueRouter({
                 component: () => import('../view/Welcome.vue')
             },
             {
-                path:'update',
-                component:()=>import('../view/Update.vue')
+                path: 'update',
+                component: () => import('../view/Update.vue')
             },
             {
-                path:'reset',
-                component:()=>import('../view/Reset.vue')
+                path: 'reset',
+                component: () => import('../view/Reset.vue')
+            }, {
+                path: 'category',
+                component: () => import('../view/Category.vue')
             }]
         },
         {

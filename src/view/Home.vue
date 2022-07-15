@@ -44,7 +44,7 @@
                 <span>文章管理</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="1-1">
+                <el-menu-item index="/home/category">
                   <i class="el-icon-menu"></i>
                   <span>文章类别</span>
                 </el-menu-item>
