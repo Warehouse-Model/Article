@@ -5,6 +5,7 @@ import './plugins/element.js'
 import './assets/css/global.css'
 import axios from 'axios'
 import store from './store'
+import '@wangeditor/editor/dist/css/style.css'
 
 Vue.config.productionTip = false
 

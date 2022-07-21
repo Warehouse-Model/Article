@@ -27,7 +27,22 @@ const router = new VueRouter({
             }, {
                 path: 'category',
                 component: () => import('../view/Category.vue')
-            }]
+            }, {
+                path: 'artilist',
+                component: () => import('../view/ArtiList.vue')
+            }, {
+                path: 'release',
+                component: () => import('../view/Release.vue')
+            },
+            {
+                path: 'modify',
+                component: () => import('../view/Modify.vue')
+            }, {
+                path: "users",
+                component: () => import('../view/Users.vue')
+            }
+
+            ]
         },
         {
             path: '*',

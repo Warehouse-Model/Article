@@ -92,7 +92,7 @@ export default {
       this.userinfo = res.data;
     },
     handleAvatarSuccess(res) {
-      if (res.status !== 200) {
+      if (res.errno !== 0) {
         this.$message({
           type: "error",
           message: "上传失败,请稍后再试",

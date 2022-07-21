@@ -38,6 +38,18 @@
             unique-opened
             router
           >
+            <el-submenu index="3">
+              <template slot="title">
+                <i class="el-icon-document-copy"></i>
+                <span>用户管理</span>
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="/home/users">
+                  <i class="el-icon-menu"></i>
+                  <span>用户列表</span>
+                </el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
             <el-submenu index="1">
               <template slot="title">
                 <i class="el-icon-document-copy"></i>
@@ -48,11 +60,11 @@
                   <i class="el-icon-menu"></i>
                   <span>文章类别</span>
                 </el-menu-item>
-                <el-menu-item index="1-2">
+                <el-menu-item index="/home/artilist">
                   <i class="el-icon-menu"></i>
                   <span>文章列表</span>
                 </el-menu-item>
-                <el-menu-item index="1-3">
+                <el-menu-item index="/home/release">
                   <i class="el-icon-menu"></i>
                   <span>发表文章</span>
                 </el-menu-item>
@@ -181,5 +193,8 @@ export default {
 }
 .el-icon-menu {
   color: #fff;
+}
+[v-cloak] {
+  display: none;
 }
 </style>
